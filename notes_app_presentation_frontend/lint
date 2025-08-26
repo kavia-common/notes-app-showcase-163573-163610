@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+/**
+ * CI shim: allows running `node ./lint` from the project root.
+ * Executes ESLint once and exits with its status code.
+ */
+import { execSync } from 'node:child_process'
+
+const eslintCmd = 'eslint --ext .js,.ts,.vue --ignore-path .gitignore .'
+
+try {
+  execSync(eslintCmd, { stdio: 'inherit' })
+  process.exit(0)
+} catch (e) {
+  process.exit(typeof e.status === 'number' ? e.status : 1)
+}

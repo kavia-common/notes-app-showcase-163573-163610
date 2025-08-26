@@ -1,0 +1,18 @@
+:root {
+  --color-primary: #2D81FF;
+  --color-secondary: #FFBB00;
+  --color-accent: #F40076;
+}
+
+html, body {
+  background: #ffffff;
+}
+
+.slidev-layout {
+  --slidev-code-background: #f8fafc;
+  --slidev-code-text: #0f172a;
+}
+
+a {
+  color: var(--color-primary);
+}
