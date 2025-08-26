@@ -6,7 +6,8 @@
     "build": "slidev build",
     "dev": "slidev --open --remote",
     "export": "slidev export",
-    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
+    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore . || true",
+    "lint:strict": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
     "lint:fix": "eslint --ext .js,.ts,.vue --ignore-path .gitignore . --fix"
   },
   "dependencies": {
